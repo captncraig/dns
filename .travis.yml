@@ -9,6 +9,6 @@ install:
   - '[[ $TRAVIS_EVENT_TYPE = "push" ]] && op="push" || op="preview"'
 
 script: 
-  -echo $op
-  -dnscontrol preview -providers cloudflare
+  - echo $op
+  - dnscontrol preview -providers cloudflare
 
