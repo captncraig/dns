@@ -3,7 +3,9 @@ language: go
 go:
   - 1.9.x
 
-install: go get github.com/StackExchange/dnscontrol
+install: 
+  - go get github.com/StackExchange/dnscontrol
+  - mv creds.json.env creds.json
 
 script: dnscontrol preview
 
