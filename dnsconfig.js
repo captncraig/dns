@@ -11,6 +11,13 @@ function mailgunMX(domainKey) {
     ]
 }
 
+function ghPages(name){
+     return [
+         A(name, "192.30.252.153"),
+         A(name, "192.30.252.154")
+     ]
+}
+
 // NY1 floating IP address
 var DO = IP("174.138.110.70")
 
@@ -22,4 +29,9 @@ D("captncraig.io", Namecheap, DnsProvider(CF)
 
 D("craigosaur.us", Namecheap, DnsProvider(CF)
     , mailgunMX("k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDiOjuizEPfO59/Hch7N4U0RWDNE+l8JIiCZUrbuBYw6rmRNJE2aMklVtBo9L0ke+qD0S7WehScS3CgKCWDF7KNUoKuCyiJDGSwtXRf8OHQcpAJsJ/zmiAYaEvQdCdRtFSb6VyPFTC18yvDbDVVlxEtav8Dq4S4zGSr9judQkPMWwIDAQAB")
+)
+
+D("hearth.cards", Namecheap, DnsProvider(CF),
+     ghPages("@"),
+     ghPages("*")
 )
