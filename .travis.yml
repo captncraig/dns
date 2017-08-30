@@ -6,6 +6,9 @@ go:
 install: 
   - go get github.com/StackExchange/dnscontrol
   - mv creds.json.env creds.json
+  - [[ $TRAVIS_EVENT_TYPE = "push" ]] && op="push" || op="preview"
 
-script: dnscontrol preview -providers cloudflare
+script: 
+  -echo $op
+  -dnscontrol preview -providers cloudflare
 
