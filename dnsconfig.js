@@ -11,12 +11,13 @@ function mailgunMX(domainKey) {
     ]
 }
 
+// NY1 floating IP address
+var DO = IP("174.138.110.70")
+
 D("captncraig.io", Namecheap, DnsProvider(CF)
     , mailgunMX("k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCYsz5TsAJO/3h0FsSP3VNQCMp+IZUJAXQyN5B/GChDifZJj6I65TfHaafvfLQszXovMZ23yllPX5+z8phCS0ifx/MrXXyJ5/m5+i9yxwVEvmTR/SZERAeN6UcWunivRPzwl/O5hDPTmGIHpksCJY4bcPU4rAHfa1IONRtPd/E0YwIDAQAB")
     , TXT("@", "keybase-site-verification=BZ97WzmtXCVIf9WESiJWVcZgw4fUs98MsTR-a278HjA")
-    , A("do","138.197.226.219")
-    , AAAA("do","2604:a880:400:d0::3f80:d001")
-    , CNAME("test","google2.com.")
+    , A("do",DO)
 )
 
 D("craigosaur.us", Namecheap, DnsProvider(CF)
