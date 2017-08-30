@@ -13,5 +13,6 @@ install:
   - '[[ $TRAVIS_EVENT_TYPE = "push" && $TRAVIS_BRANCH = "master" ]] && op="push" || op="preview"'
 
 script: 
+  - echo $op
   - dnscontrol $op -providers cloudflare
 
