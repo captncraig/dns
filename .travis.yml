@@ -7,5 +7,5 @@ install:
   - go get github.com/StackExchange/dnscontrol
   - mv creds.json.env creds.json
 
-script: dnscontrol preview
+script: dnscontrol preview -providers cloudflare
 
