@@ -1,0 +1,17 @@
+name: Push
+on:
+  push:
+    branches:
+      - master
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: DNSControl push
+        uses: captncraig/dnscontrol-action@v2.11-alpha
+        env:
+          CF_API: ${{ secrets.CF_API }}
+        with:
+          args: push
