@@ -1,5 +1,5 @@
 
-var namecheap = NewRegistrar('namecheap', 'NAMECHEAP');
+var namecheap = NewRegistrar('namecheap', 'NONE');
 var cloudflare = NewDnsProvider('cloudflare', 'CLOUDFLAREAPI')
 
 function mailgunMX(domainKey, prefix) {
