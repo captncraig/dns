@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: DNSControl push
+      - name: DNSControl preview
         uses: captncraig/dnscontrol-action@v2.11-alpha
         env:
           CF_API: ${{ secrets.CF_API }}
