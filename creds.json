@@ -1,0 +1,9 @@
+{
+    "namecheap": {
+        "apikey": "$NAMECHEAP_KEY",
+        "apiuser": "$NAMECHEAP_USER"
+    },
+    "cloudflare": {
+        "apitoken": "$CF_API"
+    }
+}
