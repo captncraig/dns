@@ -1,0 +1,14 @@
+name: Preview
+on: pull_request
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: DNSControl push
+        uses: captncraig/dnscontrol-action@v2.11-alpha
+        env:
+          CF_API: ${{ secrets.CF_API }}
+        with:
+          args: preview
